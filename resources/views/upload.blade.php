@@ -29,7 +29,7 @@
           <a class="nav-link active" href="/upload">Unggah Dokumen</a>
         </li>
       </ul>
-      <form class="d-flex me-2" action="/search" method="GET" role="search">
+      <form class="d-flex" action="/search" method="GET" role="search">
         <input class="form-control me-2"  type="text" name="search" placeholder="Search" value="{{request()->query('search')}}">
         <button class="btn btn-outline-primary" type="submit">
           <div class='mb-1'>

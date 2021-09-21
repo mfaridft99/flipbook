@@ -16,7 +16,7 @@
   <a class="navbar-brand mx-4">
       <img src="{{ asset('logo/UP logo.png')}}" alt="" width="70" height="50">
   </a>
-  <div class="container">
+  <div class="container ms-0">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
