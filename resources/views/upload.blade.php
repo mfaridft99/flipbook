@@ -16,19 +16,29 @@
   <a class="navbar-brand mx-4">
       <img src="{{ asset('logo/UP logo.png')}}" alt="" width="70" height="50">
   </a>
-  <div class="container">
+  <div class="container ms-0">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Daftar Dokumen</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/upload">Unggah Dokumen</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Daftar Dokumen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/upload">Unggah Dokumen</a>
+        </li>
       </ul>
+      <form class="d-flex me-2" action="/search" method="GET" role="search">
+        <input class="form-control me-2"  type="text" name="search" placeholder="Search" value="{{request()->query('search')}}">
+        <button class="btn btn-outline-primary" type="submit">
+          <div class='mb-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          </div>
+        </button>
+      </form>
     </div>
   </div>
 </nav>
