@@ -18,25 +18,21 @@
           .solid-container {
             height: 80vh;
           }
-        </style>
+    </style>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
   </head>
   <body>
 
-  <!-- <div class="solid-container">
-  <script type="text/javascript">
-      $('.solid-container').FlipBook({pdf: 'Storage/{{$daftarbuku->file}}'});
-    </script>
-  </div> -->
-  
-  <div class="container">
-    <a href="/download/{{$daftarbuku->file}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Download</a>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a href="/download/{{$daftarbuku->file}}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Download</a>
 
-    <span style="float: right">
-      <a href="/" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Kembali</a>
-    </span>
-  </div>
+      <span style="float: right">
+        <a href="/" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Kembali</a>
+      </span>
+    </div>
+  </nav>
 
   <br/>
   
