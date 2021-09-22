@@ -13,7 +13,7 @@ class UploadController extends Controller
 	public function mainmenu(){
 		// menampilkan menu utama
 		$daftarbuku = daftarbuku::paginate(16);
-		return view('index', compact('daftarbuku'));
+		return view('halamanutama', compact('daftarbuku'));
 	}
 	public function upload(){
 		// menampilkan halaman upload
