@@ -12,11 +12,11 @@
     <title>Baca PDF</title>
     <style type="text/css">
           body {
-              margin: 15px;
-              padding: 15px;
+              margin: 5px 15px 5px 15px;
+              padding: 5px 15px 5px 15px;
           }
           .solid-container {
-            height: 80vh;
+            height: 83vh;
           }
     </style>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
