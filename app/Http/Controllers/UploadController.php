@@ -12,8 +12,8 @@ class UploadController extends Controller
 {
 	public function mainmenu(){
 		// menampilkan menu utama
-		$daftarbuku = daftarbuku::paginate(16);
-		return view('halamanutama', compact('daftarbuku'));
+		$daftarbuku = daftarbuku::paginate(9);
+		return view('index', compact('daftarbuku'));
 	}
 	public function upload(){
 		// menampilkan halaman upload
@@ -75,17 +75,17 @@ class UploadController extends Controller
 	public function search(Request $request){
 		//mencari data
 		$search = $request->get('search');
-		$daftarbuku = daftarbuku::where('judul','LIKE','%'.$search.'%')->orWhere('keterangan','LIKE','%'.$search.'%')->paginate(16);
+		$daftarbuku = daftarbuku::where('judul','LIKE','%'.$search.'%')->orWhere('keterangan','LIKE','%'.$search.'%')->paginate(9);
 		
 		// menampilkan hasil pencarian
-		return view('halamanutama', compact('daftarbuku'));
+		return view('index', compact('daftarbuku'));
 	}
 
 	public function edit($id){
 		// mengambil data berdasarkan id yang dipilih
 		$daftarbuku = daftarbuku::where('id',$id)->get();
 		// passing data yang didapat ke view edit.blade.php
-		return view('edit',['daftarbuku' => $daftarbuku]);
+		return view('edit',compact('daftarbuku'));
 	}
 
 	public function update(Request $request, $id){
